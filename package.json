@@ -5,12 +5,19 @@
   "devDependencies": {
     "semantic-release": "^19.0.5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/mf-hosting-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/mf-hosting-frontend/issues"
+  },
+  "homepage": "https://github.com/arlac77/mf-hosting-frontend#readme",
   "pkgbuild": {
     "output": {
       "arch": {},
       "debian": {}
     },
-    "variant": "mf.linux.frontend",
     "groups": "services",
     "csp.endpoint": "/services/csp/upload",
     "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
@@ -18,11 +25,11 @@
       "nginx-mainline": ">=1.23.2"
     },
     "html.base.href": "<base href=\"{{http.path}}/\"/>",
+    "http.api": "${http.origin}${http.api.path}",
+    "http.api.path": "${http.path}/api",
     "http.base.path": "/${groups}",
     "http.origin": "https://mfelten.dynv6.net",
     "http.path": "${http.base.path}/${name}",
-    "http.api.path": "${http.path}/api",
-    "http.api": "${http.origin}${http.api.path}",
     "install.base.dir": "/${groups}/",
     "install.dir": "${install.base.dir}${name}${install.sub.dir}",
     "install.sub.dir": "/",
@@ -31,9 +38,10 @@
     "os.group": "${name}",
     "os.user": "${name}",
     "public.base.url": "https://mfelten.dynv6.net/",
+    "variant": "mf.linux.frontend",
     "well-known.content.dir": "/srv/http/.well-known/",
-    "wss.origin": "${http.origin}",
-    "wss.api": "${wss.origin}${http.api.path}"
+    "wss.api": "${wss.origin}${http.api.path}",
+    "wss.origin": "${http.origin}"
   },
   "template": {
     "inheritFrom": [
