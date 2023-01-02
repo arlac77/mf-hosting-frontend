@@ -1,0 +1,44 @@
+{
+  "name": "mf-hosting-frontend",
+  "version": "0.0.0-semantic-release",
+  "description": "hosting definitions for frontend @MF",
+  "devDependencies": {
+    "semantic-release": "^19.0.5"
+  },
+  "pkgbuild": {
+    "output": {
+      "arch": {},
+      "debian": {}
+    },
+    "variant": "mf.linux.frontend",
+    "groups": "services",
+    "csp.endpoint": "/services/csp/upload",
+    "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
+    "depends": {
+      "nginx-mainline": ">=1.23.2"
+    },
+    "html.base.href": "<base href=\"{{http.path}}/\"/>",
+    "http.base.path": "/${groups}",
+    "http.origin": "https://mfelten.dynv6.net",
+    "http.path": "${http.base.path}/${name}",
+    "http.api.path": "${http.path}/api",
+    "http.api": "${http.origin}${http.api.path}",
+    "install.base.dir": "/${groups}/",
+    "install.dir": "${install.base.dir}${name}${install.sub.dir}",
+    "install.sub.dir": "/",
+    "journal.endpoint": "/services/journal",
+    "nginx.sites.dir": "/etc/nginx/sites/common/",
+    "os.group": "${name}",
+    "os.user": "${name}",
+    "public.base.url": "https://mfelten.dynv6.net/",
+    "well-known.content.dir": "/srv/http/.well-known/",
+    "wss.origin": "${http.origin}",
+    "wss.api": "${wss.origin}${http.api.path}"
+  },
+  "template": {
+    "inheritFrom": [
+      "arlac77/template-npm",
+      "arlac77/template-semantic-release"
+    ]
+  }
+}
