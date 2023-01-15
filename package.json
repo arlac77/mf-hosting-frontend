@@ -13,36 +13,54 @@
     "url": "https://github.com/arlac77/mf-hosting-frontend/issues"
   },
   "homepage": "https://github.com/arlac77/mf-hosting-frontend#readme",
-  "pkgbuild": {
-    "output": {
-      "arch": {},
-      "debian": {}
+  "pkgbuild": [
+    {
+      "requires": {
+        "properties": {
+          "frontend": true
+        }
+      },
+      "output": {
+        "arch": {},
+        "debian": {}
+      },
+      "groups": "services",
+      "csp.endpoint": "/services/csp/upload",
+      "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
+      "depends": {
+        "nginx-mainline": ">=1.23.2"
+      },
+      "html.base.href": "<base href=\"{{http.path}}/\"/>",
+      "http.api": "${http.origin}${http.api.path}",
+      "http.api.path": "${http.path}/api",
+      "http.base.path": "/${groups}",
+      "http.origin": "https://mfelten.dynv6.net",
+      "http.path": "${http.base.path}/${name}",
+      "install.base.dir": "/${groups}/",
+      "install.dir": "${install.base.dir}${name}${install.sub.dir}",
+      "install.sub.dir": "/",
+      "journal.endpoint": "/services/journal",
+      "nginx.sites.dir": "/etc/nginx/sites/common/",
+      "os.group": "${name}",
+      "os.user": "${name}",
+      "public.base.url": "https://mfelten.dynv6.net/",
+      "variant": "mf.linux.frontend",
+      "well-known.content.dir": "/srv/http/.well-known/",
+      "wss.api": "${wss.origin}${http.api.path}",
+      "wss.origin": "${http.origin}"
     },
-    "groups": "services",
-    "csp.endpoint": "/services/csp/upload",
-    "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
-    "depends": {
-      "nginx-mainline": ">=1.23.2"
-    },
-    "html.base.href": "<base href=\"{{http.path}}/\"/>",
-    "http.api": "${http.origin}${http.api.path}",
-    "http.api.path": "${http.path}/api",
-    "http.base.path": "/${groups}",
-    "http.origin": "https://mfelten.dynv6.net",
-    "http.path": "${http.base.path}/${name}",
-    "install.base.dir": "/${groups}/",
-    "install.dir": "${install.base.dir}${name}${install.sub.dir}",
-    "install.sub.dir": "/",
-    "journal.endpoint": "/services/journal",
-    "nginx.sites.dir": "/etc/nginx/sites/common/",
-    "os.group": "${name}",
-    "os.user": "${name}",
-    "public.base.url": "https://mfelten.dynv6.net/",
-    "variant": "mf.linux.frontend",
-    "well-known.content.dir": "/srv/http/.well-known/",
-    "wss.api": "${wss.origin}${http.api.path}",
-    "wss.origin": "${http.origin}"
-  },
+    {
+      "requires": {
+        "properties": {
+          "frontend": true,
+          "example": true
+        }
+      },
+      "install.base.dir": "/example",
+      "http.base.path": "/example",
+      "groups": "example"
+    }
+  ],
   "template": {
     "inheritFrom": [
       "arlac77/template-npm",
