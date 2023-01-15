@@ -58,7 +58,8 @@
       },
       "install.base.dir": "/example",
       "http.base.path": "/example",
-      "groups": "example"
+      "groups": "example",
+      "variant": "mf.linux.frontend"
     }
   ],
   "template": {
