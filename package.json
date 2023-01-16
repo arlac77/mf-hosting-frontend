@@ -3,11 +3,11 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
   "devDependencies": {
-    "semantic-release": "^19.0.5"
+    "semantic-release": "^20.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arlac77/mf-hosting-frontend.git"
+    "url": "https://github.com/arlac77/mf-hosting-frontend"
   },
   "bugs": {
     "url": "https://github.com/arlac77/mf-hosting-frontend/issues"
