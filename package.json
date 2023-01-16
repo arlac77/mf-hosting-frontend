@@ -22,7 +22,8 @@
       },
       "output": {
         "arch": {},
-        "debian": {}
+        "debian": {},
+        "rpm": {}
       },
       "groups": "services",
       "csp.endpoint": "/services/csp/upload",
