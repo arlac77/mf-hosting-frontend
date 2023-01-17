@@ -25,6 +25,7 @@
         "debian": {},
         "rpm": {}
       },
+      "vendor": "MF",
       "groups": "services",
       "csp.endpoint": "/services/csp/upload",
       "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
