@@ -59,6 +59,7 @@
       "install.base.dir": "/examples",
       "http.base.path": "/examples",
       "groups": "examples",
+      "description": "example showing ${name} features in action",
       "variant": "mf.linux.frontend"
     }
   ],
