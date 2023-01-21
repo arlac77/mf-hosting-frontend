@@ -50,7 +50,7 @@
       "variant": "mf.linux.frontend",
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
-      "wss.origin": "${http.origin}"
+      "wss.origin": "${http.origin}",
       "nginx.trailer": ""
     },
     {
