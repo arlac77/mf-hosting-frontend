@@ -25,6 +25,9 @@
         "debian": {},
         "rpm": {}
       },
+      "content": {
+        "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+      },
       "vendor": "MF",
       "groups": "services",
       "csp.endpoint": "/services/csp/upload",
@@ -48,6 +51,7 @@
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}"
+      "nginx.trailer": ""
     },
     {
       "requires": {
@@ -60,7 +64,8 @@
       "http.base.path": "/examples",
       "groups": "examples",
       "description": "example showing ${name} features in action",
-      "variant": "mf.linux.frontend"
+      "variant": "mf.linux.frontend",
+      "nginx.trailer": "access_log off;"
     }
   ],
   "template": {
