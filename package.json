@@ -51,7 +51,8 @@
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}",
-      "nginx.trailer": ""
+      "nginx.trailer": "",
+      "hooks": "pkg/hooks.sh"
     },
     {
       "requires": {
