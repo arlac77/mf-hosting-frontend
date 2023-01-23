@@ -1,6 +1,6 @@
 
 post_install() {
-	(cd {{install.dir}} && find -type f ! -name "*.gz" ! -name "*.png" -print0|xargs -0 -r gzip -k -9)
+	(cd {{install.dir}} && find -type f ! -name "*.gz" ! -name "*.png" -print0|xargs -0 -r zopfli)
 }
 
 pre_upgrade() {
@@ -8,7 +8,7 @@ pre_upgrade() {
 }
 
 post_upgrade() {
-	(cd {{install.dir}} && find -type f ! -name "*.gz" -print0|xargs -0 -r gzip -k -9)
+	(cd {{install.dir}} && find -type f ! -name "*.gz" -print0|xargs -0 -r zopfli)
 }
 
 pre_remove() {

@@ -33,7 +33,8 @@
       "csp.endpoint": "/services/csp/upload",
       "csp.header": "default-src 'self' data:; report-uri {{csp.endpoint}}",
       "depends": {
-        "nginx-mainline": ">=1.23.2"
+        "nginx-mainline": ">=1.23.2",
+        "zopfli": ">=1.0.1"
       },
       "html.base.href": "<base href=\"{{http.path}}/\"/>",
       "http.api": "${http.origin}${http.api.path}",
