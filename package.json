@@ -68,6 +68,17 @@
       "description": "example showing ${name} features in action",
       "variant": "mf.linux.frontend",
       "nginx.location.trailer": "  access_log off;\n"
+    },
+    {
+      "requires": {
+        "properties": {
+          "frontend": true,
+          "example": true,
+          "mode": "development"
+        }
+      },
+      "http.base.path": "",
+      "variant": "mf.linux.frontend"
     }
   ],
   "template": {
