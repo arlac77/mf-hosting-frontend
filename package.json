@@ -52,7 +52,7 @@
       "well-known.content.dir": "/srv/http/.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "${http.origin}",
-      "nginx.trailer": "",
+      "nginx.location.trailer": "",
       "hooks": "pkg/hooks.sh"
     },
     {
@@ -67,7 +67,7 @@
       "groups": "examples",
       "description": "example showing ${name} features in action",
       "variant": "mf.linux.frontend",
-      "nginx.trailer": "access_log off;"
+      "nginx.location.trailer": "  access_log off;\n"
     }
   ],
   "template": {
