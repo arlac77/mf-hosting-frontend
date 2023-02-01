@@ -80,7 +80,7 @@
           "mode": "development"
         }
       },
-      "http.base.path": "",
+      "http.path": "",
       "variant": "mf.linux.frontend"
     }
   ],
