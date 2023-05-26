@@ -31,7 +31,7 @@
       "vendor": "MF",
       "groups": "services",
       "csp.endpoint": "/services/csp/upload",
-      "csp.connect-src": "connect-src {{wss.origins}};",
+      "csp.connect-src": "connect-src 'self' {{wss.origins}};",
       "csp.script-src": "",
       "csp.script-src-elem": "",
       "csp.default-src": "default-src 'self' data:;",
