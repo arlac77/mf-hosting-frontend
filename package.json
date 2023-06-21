@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
   "devDependencies": {
-    "semantic-release": "^21.0.1"
+    "semantic-release": "^21.0.5"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,7 @@
       "csp.report-uri": "report-uri {{csp.endpoint}}",
       "csp.header": "{{csp.connect-src}}{{csp.script-src}}{{csp.script-src-elem}}{{csp.default-src}}{{csp.report-uri}}",
       "depends": {
-        "nginx-mainline": ">=1.24.0",
+        "nginx-mainline": ">=1.25.1",
         "zopfli": ">=1.0.3"
       },
       "domain1": "mfelten.dynv6.net",
