@@ -32,11 +32,12 @@
       "groups": "services",
       "csp.endpoint": "/services/csp/upload",
       "csp.connect-src": "connect-src 'self' {{wss.origins}};",
+      "csp.style-src": "style-src 'unsafe-inline' 'self'",
       "csp.script-src": "",
       "csp.script-src-elem": "",
       "csp.default-src": "default-src 'self' data:;",
       "csp.report-uri": "report-uri {{csp.endpoint}}",
-      "csp.header": "{{csp.connect-src}}{{csp.script-src}}{{csp.script-src-elem}}{{csp.default-src}}{{csp.report-uri}}",
+      "csp.header": "{{csp.connect-src}}{{csp.script-src}}{{csp.script-src-elem}}{{csp.style-src}}{{csp.default-src}}{{csp.report-uri}}",
       "depends": {
         "nginx-mainline": ">=1.25.1",
         "zopfli": ">=1.0.3"
