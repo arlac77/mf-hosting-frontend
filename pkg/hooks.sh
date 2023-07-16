@@ -1,6 +1,6 @@
 
 post_install() {
-	(cd {{install.dir}} && find -type f ! -name "*.br" ! -name "*.jpg" ! -name "*.png" -print0|xargs -0 -r brotli)
+	(cd {{install.dir}} && find -type f ! -name "*.gz" ! -name "*.br" ! -name "*.jpg" ! -name "*.png" -print0|xargs -0 -r brotli)
 }
 
 pre_upgrade() {
@@ -8,7 +8,7 @@ pre_upgrade() {
 }
 
 post_upgrade() {
-	(cd {{install.dir}} && find -type f ! -name "*.br" ! -name "*.jpg" ! -name "*.png" -print0|xargs -0 -r brotli)
+	(cd {{install.dir}} && find -type f ! -name "*.gz" ! -name "*.br" ! -name "*.jpg" ! -name "*.png" -print0|xargs -0 -r brotli)
 }
 
 pre_remove() {
