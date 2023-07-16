@@ -4,7 +4,7 @@ post_install() {
 }
 
 pre_upgrade() {
-	(cd {{install.dir}} && find -type f -name "*.br" -print0|xargs -0 -r rm)
+	(cd {{install.dir}} && find -type f -name "*.br" -o -name "*.gz" -print0|xargs -0 -r rm)
 }
 
 post_upgrade() {
@@ -12,5 +12,5 @@ post_upgrade() {
 }
 
 pre_remove() {
-	(cd {{install.dir}} && find -type f -name "*.br" -print0|xargs -0 -r rm)
+	(cd {{install.dir}} && find -type f -name "*.br" -o -name "*.gz" -print0|xargs -0 -r rm)
 }
