@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
   "devDependencies": {
-    "semantic-release": "^21.0.6"
+    "semantic-release": "^21.0.7"
   },
   "repository": {
     "type": "git",
@@ -62,8 +62,15 @@
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "wss://${domain1}",
       "wss.origins": "${wss.origin} wss://${domain2} wss://${domain3}",
-      "nginx.location.trailer": "",
-      "hooks": "pkg/hooks.sh"
+      "nginx.location.trailer": ""
+    },
+    {
+      "requires": {
+        "properties": {
+          "compress-on-install": true
+        }
+      },
+      "hooks": "pkg/compress-hooks.sh"
     },
     {
       "requires": {
