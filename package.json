@@ -90,6 +90,19 @@
       "requires": {
         "properties": {
           "frontend": true,
+          "static": true
+        }
+      },
+      "install.base.dir": "/srv/http/",
+      "http.base.path": "",
+      "variant": "mf.linux.frontend",
+      "groups": "static",
+      "description": "static content of ${name}"
+    },
+    {
+      "requires": {
+        "properties": {
+          "frontend": true,
           "mode": "development"
         }
       },
