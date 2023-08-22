@@ -51,6 +51,7 @@
       "http.base.path": "/services",
       "http.origin": "https://${domain1}",
       "http.path": "${http.base.path}/${name}",
+      "http.path.lonesome": "${http.path}",
       "install.base.dir": "/services/",
       "install.dir": "${install.base.dir}${name}${install.sub.dir}",
       "install.sub.dir": "/",
