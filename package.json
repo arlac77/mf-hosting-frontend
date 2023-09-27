@@ -39,8 +39,7 @@
       "csp.report-uri": "report-uri {{csp.endpoint}}",
       "csp.header": "{{csp.connect-src}}{{csp.script-src}}{{csp.script-src-elem}}{{csp.style-src}}{{csp.default-src}}{{csp.report-uri}}",
       "depends": {
-        "nginx-mainline": ">=1.25.2",
-        "brotli": ">=1.0.9"
+        "nginx-mainline": ">=1.25.2"
       },
       "domain1": "mfelten.dynv6.net",
       "domain2": "mfelten.dedyn.io",
