@@ -3,7 +3,7 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
   "devDependencies": {
-    "semantic-release": "^22.0.10"
+    "semantic-release": "^22.0.12"
   },
   "repository": {
     "type": "git",
