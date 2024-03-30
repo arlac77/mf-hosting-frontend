@@ -2,13 +2,15 @@
   "name": "mf-hosting-frontend",
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
-  "keywords" : ["npm-pkgbuild"],
+  "keywords": [
+    "npm-pkgbuild"
+  ],
   "devDependencies": {
-    "semantic-release": "^22.0.12"
+    "semantic-release": "^23.0.6"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arlac77/mf-hosting-frontend"
+    "url": "git+https://github.com/arlac77/mf-hosting-frontend.git"
   },
   "bugs": {
     "url": "https://github.com/arlac77/mf-hosting-frontend/issues"
