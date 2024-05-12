@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 20.12.2
+          - 20.13.1
     steps:
       - uses: actions/checkout@v4
       - name: 'Build / Test Node ${{ matrix.node-version }}'
@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20.12.2
+          node-version: 20.13.1
           cache: 'npm'
       - run: npm ci
       - run: npx semantic-release
