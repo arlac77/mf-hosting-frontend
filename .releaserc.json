@@ -1,0 +1,32 @@
+{
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/npm",
+        [
+          "@semantic-release/exec",
+          {
+            "publishCmd": "npx npm-pkgbuild --publish dist"
+          }
+        ],
+        [
+          "@semantic-release/github",
+          {
+            "assets": [
+              {
+                "path": "dist/*.deb",
+                "label": "any Debian Package"
+              },
+              {
+                "path": "dist/*any.pkg.*",
+                "label": "any Arch Linux Package"
+              },
+              {
+                "path": "dist/*noarch.rpm",
+                "label": "noarch RPM"
+              }
+            ]
+          }
+        ]
+      ]
+  }

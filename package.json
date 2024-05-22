@@ -3,10 +3,21 @@
   "version": "0.0.0-semantic-release",
   "description": "hosting definitions for frontend @MF",
   "keywords": [
-    "npm-pkgbuild"
+    "npm-pkgbuild",
+    "semantic-release-config"
   ],
+  "files": [
+    ".releaserc.json",
+    "pkg/compress-hooks.sh",
+    "pkg/nginx.conf"
+  ],
+  "main": ".releaserc.json",
   "devDependencies": {
-    "semantic-release": "^23.1.1"
+    "semantic-release": "^23.1.1",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/github": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^13.0.0"
   },
   "repository": {
     "type": "git",
