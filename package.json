@@ -90,7 +90,8 @@
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "wss://${domain1}",
       "wss.origins": "${wss.origin} wss://${domain2} wss://${domain3}",
-      "nginx.location.trailer": ""
+      "nginx.location.trailer": "",
+      "nginx.server.extra": ""
     },
     {
       "requires": {
