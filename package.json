@@ -64,7 +64,7 @@
       "csp.endpoint": "/services/csp/upload",
       "csp.connect-src": "connect-src 'self' {{wss.origins}};",
       "csp.style-src": "style-src 'self' 'unsafe-inline';",
-      "csp.script-src": "script-src 'self' 'unsafe-inline';",
+      "csp.script-src": "script-src 'self';",
       "csp.script-src-elem": "",
       "csp.default-src": "default-src 'self' data:;",
       "csp.report-uri": "report-uri {{csp.endpoint}}",
