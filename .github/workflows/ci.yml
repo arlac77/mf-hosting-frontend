@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: '${{ matrix.node-version }}'
           cache: 'npm'
-      - run: npm ci
       - run: npm run cover --if-present
   release:
     needs:
@@ -26,7 +25,6 @@ jobs:
         with:
           node-version: 22.5.1
           cache: 'npm'
-      - run: npm ci
       - run: npx semantic-release
         env:
           CI: 'true'
