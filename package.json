@@ -40,7 +40,7 @@
             "nginx": true
           },
           "dependencies": {
-            "nginx-mainline": ">=1.27.0",
+            "nginx-mainline": ">=1.27.1",
             "node": "-",
             "bun": "-"
           }
