@@ -86,7 +86,6 @@
       "install.dir": "${install.base.dir}${name}${install.sub.dir}",
       "install.sub.dir": "/",
       "journal.endpoint": "/services/journal",
-      "nginx.sites.dir": "/etc/nginx/sites/common/",
       "public.base.url": "https://${domain1}/",
       "variant": "mf.linux.frontend",
       "well-known.content.dir": "/srv/http/.well-known/",
