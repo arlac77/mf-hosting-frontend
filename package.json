@@ -38,7 +38,8 @@
         "arch": {
           "properties": {
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites/common/"
+            "nginx.sites.dir": "/etc/nginx/sites/common/",
+            "nginx.content.dir": "/srv/http/"
           },
           "dependencies": {
             "nginx-mainline": ">=1.27.1",
@@ -49,7 +50,8 @@
         "debian": {
           "properties": {
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites-available/"
+            "nginx.sites.dir": "/etc/nginx/sites-available/",
+            "nginx.content.dir": "/var/www/html/"
           }
         },
         "rpm": {
@@ -88,7 +90,7 @@
       "journal.endpoint": "/services/journal",
       "public.base.url": "https://${domain1}/",
       "variant": "mf.linux.frontend",
-      "well-known.content.dir": "/srv/http/.well-known/",
+      "well-known.content.dir": "${nginx.content.dir}.well-known/",
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "wss://${domain1}",
       "wss.origins": "${wss.origin} wss://${domain2} wss://${domain3}",
