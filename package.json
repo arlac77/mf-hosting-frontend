@@ -40,7 +40,7 @@
             "nginx": true,
             "nginx.sites.dir": "/etc/nginx/sites/common/",
             "nginx.content.dir": "/srv/http/",
-            "nginx.location.header" : "  brotli_static on;"
+            "nginx.location.header" : "  brotli_static on;\n"
           },
           "dependencies": {
             "nginx-mainline": ">=1.27.1",
@@ -59,7 +59,7 @@
         },
         "rpm": {
           "properties": {
-            "nginx": true,
+            "nginx": true
           }
         }
       },
