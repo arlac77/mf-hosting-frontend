@@ -39,7 +39,8 @@
           "properties": {
             "nginx": true,
             "nginx.sites.dir": "/etc/nginx/sites/common/",
-            "nginx.content.dir": "/srv/http/"
+            "nginx.content.dir": "/srv/http/",
+            "nginx.location.header" : "  brotli_static on;"
           },
           "dependencies": {
             "nginx-mainline": ">=1.27.1",
@@ -50,14 +51,15 @@
         "debian": {
           "properties": {
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites-available/",
             "nginx.content.dir": "/var/www/html/"
+          },
+          "dependencies": {
+            "nginx": ">=1.0.0"
           }
         },
         "rpm": {
           "properties": {
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites-available/"
           }
         }
       },
@@ -94,8 +96,10 @@
       "wss.api": "${wss.origin}${http.api.path}",
       "wss.origin": "wss://${domain1}",
       "wss.origins": "${wss.origin} wss://${domain2} wss://${domain3}",
+      "nginx.location.header": "",
       "nginx.location.trailer": "",
-      "nginx.server.extra": ""
+      "nginx.server.extra": "",
+      "nginx.sites.dir": "/etc/nginx/sites-available/"
     },
     {
       "requires": {
