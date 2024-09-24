@@ -7,7 +7,7 @@
     "pkg/nginx.conf"
   ],
   "main": ".releaserc.json",
-  "description": "hosting definitions for frontend @MF",
+  "description": "hosting definitions of frontend projects @MF",
   "keywords": [
     "npm-pkgbuild",
     "semantic-release-config"
@@ -40,7 +40,7 @@
             "nginx": true,
             "nginx.sites.dir": "/etc/nginx/sites/common/",
             "nginx.content.dir": "/srv/http/",
-            "nginx.location.header" : "  brotli_static on;\n"
+            "nginx.location.header": "  brotli_static on;\n"
           },
           "dependencies": {
             "nginx-mainline": ">=1.27.1",
@@ -62,6 +62,11 @@
         "rpm": {
           "properties": {
             "nginx": true
+          },
+          "dependencies": {
+            "nginx": ">=1.22.1",
+            "node": "-",
+            "bun": "-"
           }
         }
       },
