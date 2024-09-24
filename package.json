@@ -132,7 +132,7 @@
           "static": true
         }
       },
-      "install.base.dir": "/srv/http/",
+      "install.base.dir": "${nginx.content.dir}",
       "http.base.path": "",
       "variant": "mf.linux.frontend",
       "groups": "static",
