@@ -71,7 +71,7 @@
         }
       },
       "content": {
-        "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf"
+        "${nginx.locations.common.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf"
       },
       "vendor": "MF",
       "groups": "services",
@@ -107,7 +107,7 @@
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
       "nginx.locations.dir": "/etc/nginx/locations/",
-      "nginx.locations.common.dir": "${nginx.locations.dir}common/",
+      "nginx.location.category": "common",
       "nginx.sites.dir": "/etc/nginx/sites-available/"
     },
     {
@@ -130,7 +130,8 @@
       "groups": "examples",
       "description": "example showing ${name} features in action",
       "variant": "mf.linux.frontend",
-      "nginx.location.trailer": "  access_log off;\n"
+      "nginx.location.trailer": "  access_log off;\n",
+      "nginx.location.category": "examples"
     },
     {
       "requires": {
@@ -143,7 +144,8 @@
       "http.base.path": "",
       "variant": "mf.linux.frontend",
       "groups": "static",
-      "description": "static content of ${name}"
+      "description": "static content of ${name}",
+      "nginx.location.category": "static"
     },
     {
       "requires": {
