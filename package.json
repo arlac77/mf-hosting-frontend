@@ -71,7 +71,7 @@
         }
       },
       "content": {
-        "${nginx.locations.common.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf"
+        "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf"
       },
       "vendor": "MF",
       "groups": "services",
