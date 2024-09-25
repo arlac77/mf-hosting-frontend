@@ -106,6 +106,8 @@
       "nginx.location.header": "",
       "nginx.location.trailer": "",
       "nginx.server.extra": "",
+      "nginx.locations.dir": "/etc/nginx/locations/",
+      "nginx.locations.common.dir": "${nginx.locations.dir}common/",
       "nginx.sites.dir": "/etc/nginx/sites-available/"
     },
     {
