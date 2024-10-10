@@ -64,7 +64,7 @@
             "nginx": true
           },
           "dependencies": {
-            "nginx": ">=1.22.1",
+            "nginx": ">=1.22.2",
             "node": "-",
             "bun": "-"
           }
