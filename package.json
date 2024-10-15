@@ -93,7 +93,7 @@
       "http.origin": "https://${domain1}",
       "http.path": "${http.base.path}/${name}",
       "http.path.lonesome": "${http.path}",
-      "http.header.alt-svc": "h3=\":443\";ma=86400;persist=1",
+      "http.header.alt-svc": "'h3=\":443\";ma=86400;persist=1'",
       "http.try_files.extra": "",
       "install.base.dir": "/services/",
       "install.dir": "${install.base.dir}${name}${install.sub.dir}",
