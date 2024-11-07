@@ -18,9 +18,10 @@ jobs:
         os:
           - ubuntu-latest
         node-version:
+          - 22.11.0
     steps:
       - name: checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
       - name: prepare node
         uses: actions/setup-node@v4.1.0
         with:
@@ -42,11 +43,11 @@ jobs:
       id-token: write
     steps:
       - name: checkout
-        uses: actions/checkout@v4.1.7
+        uses: actions/checkout@v4.2.2
       - name: prepare node
         uses: actions/setup-node@v4.1.0
         with:
-          node-version: 22.9.0
+          node-version: 22.11.0
           cache: npm
           cache-dependency-path: package-lock.json
       - name: install
