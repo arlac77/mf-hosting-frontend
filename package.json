@@ -15,7 +15,7 @@
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/exec": "^6.0.3",
-    "@semantic-release/github": "^11.0.0",
+    "@semantic-release/github": "^11.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
     "semantic-release": "^24.2.0"
   },
@@ -43,7 +43,7 @@
             "nginx.location.header": "  brotli_static on;\n"
           },
           "dependencies": {
-            "nginx-mainline": ">=1.27.1",
+            "nginx-mainline": ">=1.27.2",
             "node": "-",
             "bun": "-"
           }
