@@ -71,7 +71,7 @@
         }
       },
       "content": {
-        "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx.conf"
+        "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx-${nginx.type}.conf"
       },
       "vendor": "MF",
       "groups": "services",
@@ -110,7 +110,8 @@
       "nginx.server.extra": "",
       "nginx.locations.dir": "/etc/nginx/locations/",
       "nginx.location.category": "common",
-      "nginx.sites.dir": "/etc/nginx/sites-available/"
+      "nginx.sites.dir": "/etc/nginx/sites-available/",
+      "nginx.type": "spa"
     },
     {
       "requires": {
