@@ -4,8 +4,8 @@
   "files": [
     ".releaserc.json",
     "pkg/compress-hooks.sh",
-    "pkg/nginx-static.conf",
-    "pkg/nginx-spa.conf"
+    "pkg/nginx-spa.conf",
+    "pkg/nginx-static.conf"
   ],
   "main": ".releaserc.json",
   "description": "hosting definitions of frontend projects @MF",
@@ -18,7 +18,7 @@
     "@semantic-release/exec": "^6.0.3",
     "@semantic-release/github": "^11.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
-    "semantic-release": "^24.2.0"
+    "semantic-release": "^24.2.3"
   },
   "repository": {
     "type": "git",
