@@ -18,12 +18,12 @@ jobs:
         os:
           - ubuntu-latest
         node-version:
-          - 22.18.0
+          - 24.10.0
     steps:
       - name: checkout
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v5.0.0
       - name: prepare node
-        uses: actions/setup-node@v4.1.0
+        uses: actions/setup-node@v6.0.0
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
@@ -43,11 +43,11 @@ jobs:
       id-token: write
     steps:
       - name: checkout
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v5.0.0
       - name: prepare node
-        uses: actions/setup-node@v4.1.0
+        uses: actions/setup-node@v6.0.0
         with:
-          node-version: 22.18.0
+          node-version: 24.10.0
           cache: npm
           cache-dependency-path: package-lock.json
       - name: install
@@ -56,5 +56,4 @@ jobs:
         run: npx semantic-release
         env:
           CI: "true"
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
