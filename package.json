@@ -40,9 +40,9 @@
         "arch": {
           "properties": {
             "nginx": true,
-            "nginx.sites.dir": "/etc/nginx/sites/common/",
-            "nginx.content.dir": "/srv/http/",
-            "nginx.location.header": "  brotli_static on;\n"
+            "nginx_sites_dir": "/etc/nginx/sites/common/",
+            "nginx_content_dir": "/srv/http/",
+            "nginx_location_header": "  brotli_static on;\n"
           },
           "dependencies": {
             "nginx-mainline": ">=1.29.4",
@@ -53,7 +53,7 @@
         "debian": {
           "properties": {
             "nginx": true,
-            "nginx.content.dir": "/var/www/html/"
+            "nginx_content_dir": "/var/www/html/"
           },
           "dependencies": {
             "nginx": ">=1.22.1",
@@ -73,47 +73,47 @@
         }
       },
       "content": {
-        "${nginx.locations.dir}${nginx.location.category}/${name}.conf": "pkg/nginx-${nginx.type}.conf"
+        "${nginx_locations_dir}${nginx_location_category}/${name}.conf": "pkg/nginx-${nginx_type}.conf"
       },
       "vendor": "MF",
       "groups": "services",
-      "csp.endpoint": "/services/csp/upload",
-      "csp.connect-src": "connect-src 'self' {{wss.origins}};",
-      "csp.style-src": "style-src 'self' 'unsafe-inline';",
-      "csp.script-src": "script-src 'self';",
-      "csp.script-src-elem": "",
-      "csp.default-src": "default-src 'self' data:;",
-      "csp.report-uri": "report-uri {{csp.endpoint}}",
-      "csp.header": "{{csp.connect-src}}{{csp.script-src}}{{csp.script-src-elem}}{{csp.style-src}}{{csp.default-src}}{{csp.report-uri}}",
+      "csp_endpoint": "/services/csp/upload",
+      "csp_connect_src": "connect-src 'self' {{wss_origins}};",
+      "csp_style_src": "style-src 'self' 'unsafe-inline';",
+      "csp_script_src": "script-src 'self';",
+      "csp_script_src_elem": "",
+      "csp_default_src": "default-src 'self' data:;",
+      "csp_report_uri": "report-uri {{csp_endpoint}}",
+      "csp_header": "{{csp_connect_src}}{{csp_script_src}}{{csp_script_src_elem}}{{csp_style_src}}{{csp_default_src}}{{csp_report_uri}}",
       "domain1": "mfelten.dynv6.net",
       "domain2": "mfelten.dedyn.io",
       "domain3": "mfelten.ddnss.de",
-      "html.base.href": "<base href=\"{{http.path}}/\"/>",
-      "http.api": "${http.origin}${http.api.path}",
-      "http.api.path": "${http.path}/api",
-      "http.base.path": "/services",
-      "http.origin": "https://${domain1}",
-      "http.path": "${http.base.path}/${name}",
-      "http.path.lonesome": "${http.path}",
-      "http.header.alt-svc": "'h3=\":443\";ma=86400;persist=1'",
-      "http.try_files.extra": "",
-      "install.base.dir": "/services/",
-      "install.dir": "${install.base.dir}${name}${install.sub.dir}",
-      "install.sub.dir": "/",
-      "journal.endpoint": "/services/journal",
-      "public.base.url": "https://${domain1}/",
+      "html_base_href": "<base href=\"{{http_path}}/\"/>",
+      "http_api": "${http_origin}${http_api_path}",
+      "http_api_path": "${http_path}/api",
+      "http_base_path": "/services",
+      "http_origin": "https://${domain1}",
+      "http_path": "${http_base_path}/${name}",
+      "http_path_lonesome": "${http_path}",
+      "http_header_alt_svc": "'h3=\":443\";ma=86400;persist=1'",
+      "http_try_files_extra": "",
+      "install_base_dir": "/services/",
+      "install_dir": "${install_base_dir}${name}${install_sub_dir}",
+      "install_sub_dir": "/",
+      "journal_endpoint": "/services/journal",
+      "public_base_url": "https://${domain1}/",
       "variant": "mf.linux.frontend",
-      "well-known.content.dir": "${nginx.content.dir}.well-known/",
-      "wss.api": "${wss.origin}${http.api.path}",
-      "wss.origin": "wss://${domain1}",
-      "wss.origins": "${wss.origin} wss://${domain2} wss://${domain3}",
-      "nginx.location.header": "",
-      "nginx.location.trailer": "",
-      "nginx.server.extra": "",
-      "nginx.locations.dir": "/etc/nginx/locations/",
-      "nginx.location.category": "common",
-      "nginx.sites.dir": "/etc/nginx/sites-available/",
-      "nginx.type": "spa"
+      "well-known_content_dir": "${nginx_content_dir}.well-known/",
+      "wss_api": "${wss_origin}${http_api_path}",
+      "wss_origin": "wss://${domain1}",
+      "wss_origins": "${wss_origin} wss://${domain2} wss://${domain3}",
+      "nginx_location_header": "",
+      "nginx_location_trailer": "",
+      "nginx_server_extra": "",
+      "nginx_locations_dir": "/etc/nginx/locations/",
+      "nginx_location_category": "common",
+      "nginx_sites_dir": "/etc/nginx/sites-available/",
+      "nginx_type": "spa"
     },
     {
       "requires": {
@@ -130,13 +130,13 @@
           "example": true
         }
       },
-      "install.base.dir": "/examples/",
-      "http.base.path": "/examples",
+      "install_base_dir": "/examples/",
+      "http_base_path": "/examples",
       "groups": "examples",
       "description": "example showing ${name} features in action",
       "variant": "mf.linux.frontend",
-      "nginx.location.trailer": "  access_log off;\n",
-      "nginx.location.category": "examples"
+      "nginx_location_trailer": "  access_log off;\n",
+      "nginx_location_category": "examples"
     },
     {
       "requires": {
@@ -145,12 +145,12 @@
           "static": true
         }
       },
-      "install.base.dir": "${nginx.content.dir}",
-      "http.base.path": "",
+      "install_base_dir": "${nginx_content_dir}",
+      "http_base_path": "",
       "variant": "mf.linux.frontend",
       "groups": "static",
       "description": "static content of ${name}",
-      "nginx.location.category": "static"
+      "nginx_location_category": "static"
     },
     {
       "requires": {
@@ -159,7 +159,7 @@
           "mode": "development"
         }
       },
-      "http.path": "",
+      "http_path": "",
       "variant": "mf.linux.frontend"
     }
   ],
