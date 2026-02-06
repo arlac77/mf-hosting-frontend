@@ -103,7 +103,7 @@
       "journal_endpoint": "/services/journal",
       "public_base_url": "https://${domain1}/",
       "variant": "mf.linux.frontend",
-      "well-known_content_dir": "${nginx_content_dir}.well-known/",
+      "well_known_content_dir": "${nginx_content_dir}.well-known/",
       "wss_api": "${wss_origin}${http_api_path}",
       "wss_origin": "wss://${domain1}",
       "wss_origins": "${wss_origin} wss://${domain2} wss://${domain3}",
