@@ -45,7 +45,7 @@
             "nginx_location_header": "  brotli_static on;\n"
           },
           "dependencies": {
-            "nginx-mainline": ">=1.31.0",
+            "nginx-mainline": ">=1.31.1",
             "node": "-",
             "bun": "-"
           }
