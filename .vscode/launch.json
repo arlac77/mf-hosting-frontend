@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "AVA",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ava",
+      "runtimeArgs": ["--serial", "${file}"],
+      "outputCapture": "std",
+      "skipFiles": ["<node_internals>/**/*"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "node",
+      "runtimeArgs": ["${file}"],
+      "outputCapture": "std",
+      "skipFiles": ["<node_internals>/**/*"]
+    }
+  ]
+}
