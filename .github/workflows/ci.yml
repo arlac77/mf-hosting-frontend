@@ -10,6 +10,7 @@ on:
       - next
 permissions:
   contents: read
+  id-token: write
 jobs:
   test-node:
     runs-on: ubuntu-latest
@@ -30,6 +31,14 @@ jobs:
         run: npm ci
       - name: test and coverage
         run: npm run cover --if-present
+      - name: coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          flag-name: run-${{ matrix.test_number }}
+          path-to-lcov: build/coverage/lcov.info
+          parallel: true
+        continue-on-error: true
   release:
     needs:
       - test-node
@@ -45,7 +54,7 @@ jobs:
       - name: prepare node
         uses: actions/setup-node@v6.4.0
         with:
-          node-version: 26.3.1
+          node-version: 24.18.0
       - name: install
         run: npm ci
       - name: release
