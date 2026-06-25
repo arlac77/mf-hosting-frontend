@@ -1,25 +1,35 @@
 {
   "name": "mf-hosting-frontend",
   "version": "0.0.0-semantic-release",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     ".releaserc.json",
     "pkg/compress-hooks.sh",
     "pkg/nginx-spa.conf",
     "pkg/nginx-static.conf"
   ],
-  "packageManager": "npm@11.6.4+sha512.1118cab46a05a50aee6bff5b1b4fa1df18afff89d57465620a3518035026955db87c5bdf9d207b07b7487d99f2490d450cb774655ad63ec2cba7bf1d0ad25d45",
+  "packageManager": "npm@11.16.0",
   "main": ".releaserc.json",
   "description": "hosting definitions of frontend projects @MF",
   "keywords": [
     "npm-pkgbuild",
     "semantic-release-config"
   ],
+  "contributors": [
+    {
+      "name": "Markus Felten",
+      "email": "markus.felten@gmx.de"
+    }
+  ],
+  "license": "0BSD",
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/github": "^12.0.6",
     "@semantic-release/release-notes-generator": "^14.1.0",
-    "semantic-release": "^25.0.3"
+    "semantic-release": "^25.0.5"
   },
   "repository": {
     "type": "git",
@@ -165,6 +175,7 @@
   ],
   "template": {
     "inheritFrom": [
+      "arlac77/template-arlac77-github",
       "arlac77/template-npm",
       "arlac77/template-semantic-release"
     ]
