@@ -29,7 +29,7 @@
     "@semantic-release/exec": "^7.1.0",
     "@semantic-release/github": "^12.0.6",
     "@semantic-release/release-notes-generator": "^14.1.0",
-    "semantic-release": "^25.0.5"
+    "semantic-release": "^25.0.7"
   },
   "repository": {
     "type": "git",
