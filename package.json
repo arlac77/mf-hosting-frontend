@@ -47,7 +47,7 @@
         }
       },
       "output": {
-        "arch": {
+        "alpm": {
           "properties": {
             "nginx": true,
             "nginx_sites_dir": "/etc/nginx/sites/common/",
@@ -55,7 +55,7 @@
             "nginx_location_header": "  brotli_static on;\n"
           },
           "dependencies": {
-            "nginx-mainline": ">=1.31.3",
+            "nginx-mainline": ">=1.31.4",
             "node": "-",
             "bun": "-"
           }
